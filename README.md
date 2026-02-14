@@ -45,22 +45,19 @@ git clone https://github.com/Waseem3720/Movieflix.git
 
 ## ⚡ Usage
 
-- **Sign Up:** Create a new account with name, email, and password.  
-- **Login:** Use your email and password to log in.  
-- **Browse Movies:** Click on categories or scroll through movie sections.  
-- **Search:** Type in the search bar to filter movies globally.  
-- **Watch Video:** Click on a movie card to open the video modal.  
-- **FAQ:** Click on questions to expand answers.  
+1. **Sign Up:** Create a new account with name, email, and password.  
+2. **Login:** Use your email and password to log in.  
+3. **Browse Movies:** Click on categories or scroll through movie sections.  
+4. **Search:** Type in the search bar to filter movies globally.  
+5. **Watch Video:** Click on a movie card to open the video modal.  
+6. **FAQ:** Click on questions to expand answers.  
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5 & CSS3** – For structure and styling  
-- **JavaScript (ES6)** – For dynamic content and interactivity  
-- **LocalStorage** – For user authentication persistence  
-- **Responsive Design** – Optimized for mobile, tablet, and desktop  
-- **Grid & Flexbox** – For movie layouts and alignment  
-
-
-
+- `HTML5 & CSS3` – For structure and styling  
+- `JavaScript (ES6)` – For dynamic content and interactivity  
+- `LocalStorage` – For user authentication persistence  
+- `Responsive Design` – Optimized for mobile, tablet, and desktop  
+- `Grid & Flexbox` – For movie layouts and alignment  
