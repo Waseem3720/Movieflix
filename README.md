@@ -45,14 +45,12 @@ git clone https://github.com/Waseem3720/Movieflix.git
 
 ## ⚡ Usage
 
-1. **Sign Up:** Create a new account with name, email, and password.  
-2. **Login:** Use your email and password to log in.  
-3. **Browse Movies:** Click on categories or scroll through movie sections.  
-4. **Search:** Type in the search bar to filter movies globally.  
-5. **Watch Video:** Click on a movie card to open the video modal.  
-6. **FAQ:** Click on questions to expand answers.  
-
----
+- **Sign Up:** Create a new account with name, email, and password.  
+- **Login:** Use your email and password to log in.  
+- **Browse Movies:** Click on categories or scroll through movie sections.  
+- **Search:** Type in the search bar to filter movies globally.  
+- **Watch Video:** Click on a movie card to open the video modal.  
+- **FAQ:** Click on questions to expand answers.  
 
 ## 🛠️ Technologies Used
 
