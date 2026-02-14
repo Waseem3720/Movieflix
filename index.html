@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieflix - All in One</title>
+    <link rel="shortcut icon" href="./img/title icon.png" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- INTERFACE SECTION -->
+    <div id="interface-page">
+        <div class="first-div">
+            <div class="first-line">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <button class="signin-btn" onclick="showPage('login-page')">Sign
+                    In</button>
+            </div>
+
+            <div class="hero-content">
+                <h1>Unlimited movies, TV shows, and more</h1>
+                <h3>Watch anywhere. Cancel anytime.</h3>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email-signup">
+                    <input type="email" placeholder="Email address">
+                    <button class="get-started-btn" onclick="showPage('signup-page')">
+                        Get Started <span class="chevron">&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-title">Questions? Contact us.</p>
+                <div class="footer-row">
+                    <div class="footer-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Speed Test</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Cookie Preferences</a>
+                        <a href="#">Legal Notices</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Account</a>
+                        <a href="#">Ways to Watch</a>
+                        <a href="#">Corporate Information</a>
+                        <a href="#">Only on Movieflix</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Media Center</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+                <p class="footer-country">Movieflix Pakistan</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- LOGIN SECTION -->
+    <div id="login-page" style="display: none;">
+        <div class="external-container auth-page">
+            <div class="auth-header">
+                <img src="img/logo.png" alt="Logo" class="logo" onclick="showPage('interface-page')"
+                    style="cursor: pointer;">
+            </div>
+            <div class="internal-container">
+                <div class="signin">
+                    <h2 class="auth-title">Log In</h2>
+                    <input id="login-email" class="inputs" type="text" placeholder="Email or Phone Number">
+                    <input id="login-password" class="inputs" type="password" placeholder="Password">
+                    <button onclick="validateAuth('login')" class="btn1 main-btn">Log In</button>
+                    <div class="signin-first-div">
+                        <div class="signin-first-div-remember-me">
+                            <input type="checkbox" checked><span class="remeber_me">Remember me</span>
+                        </div>
+                        <div class="signin-first-div-need-help">
+                            <a href="#" onclick="showPage('faq-page')">Need help?</a>
+                        </div>
+                    </div>
+                    <div class="signin-last-div">
+                        <p>Don't have an Account? <a href="#" onclick="showPage('signup-page')">Sign up now.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer secondary-footer">
+            <div class="footer-container">
+                <p class="footer-title">Questions? Contact us.</p>
+                <div class="footer-row">
+                    <div class="footer-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Terms of Use</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SIGNUP SECTION -->
+    <div id="signup-page" style="display: none;">
+        <div class="external-container auth-page">
+            <div class="auth-header">
+                <img src="img/logo.png" alt="Logo" class="logo" onclick="showPage('interface-page')"
+                    style="cursor: pointer;">
+            </div>
+            <div class="internal-container">
+                <div class="signin">
+                    <h2 class="auth-title">Sign UP</h2>
+                    <input id="signup-name" class="inputs" type="text" placeholder="Enter Name">
+                    <input id="signup-email" class="inputs" type="text" placeholder="Enter Email">
+                    <input id="signup-password" class="inputs" type="password" placeholder="Password">
+                    <input id="signup-confirm" class="inputs" type="password" placeholder="Confirm Password">
+                    <button onclick="validateAuth('signup')" class="btn1 main-btn">Sign UP</button>
+                    <div class="signin-last-div">
+                        <p>Already have an Account ? <a href="#" onclick="showPage('login-page')">Log in .</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer secondary-footer">
+            <div class="footer-container">
+                <p class="footer-title">Questions? Contact us.</p>
+                <div class="footer-row">
+                    <div class="footer-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Terms of Use</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SEARCH SECTION -->
+    <div id="search-page" style="display: none;">
+        <div class="search-header">
+            <div class="search-top-bar">
+                <img src="img/logo.png" alt="Logo" class="search-logo" onclick="showPage('interface-page')">
+                <div class="search-input-wrapper">
+                    <span class="search-icon-small">🔍</span>
+                    <input type="text" class="search-bar-modern" placeholder="Search movies, series..." />
+                </div>
+            </div>
+
+            <div class="search-layout">
+                <!-- Left: Suggestions -->
+                <div class="search-suggestions">
+                    <h2 class="suggestions-title">Suggestions</h2>
+                    <ul class="suggestions-list">
+                        <li class="active" onclick="filterCategory('comedy', this)">Comedy Movies</li>
+                        <li onclick="filterCategory('action', this)">Action Movies</li>
+                        <li onclick="filterCategory('romance', this)">Romantic Movies</li>
+                        <li onclick="filterCategory('anime', this)">Shounen Anime</li>
+                        <li onclick="filterCategory('family', this)">Family Movies</li>
+                        <li onclick="filterCategory('horror', this)">Horror Movies</li>
+                        <li onclick="filterCategory('real', this)">Based on Real Lives</li>
+                        <li onclick="filterCategory('series', this)">Web Series</li>
+                        <li onclick="filterCategory('90s', this)">Movies from the 1990s</li>
+                        <li onclick="filterCategory('premium', this)">Premium Collection</li>
+                    </ul>
+                </div>
+
+                <!-- Right: Movie Grid -->
+                <div class="search-results">
+                    <h2 class="section-title">Comedy Movies</h2>
+                    <div id="dynamic-movie-grid" class="movie-grid">
+                        <!-- Movie cards will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideo()">&times;</span>
+            <div id="player-container">
+                <!-- Video will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MORE CONTENT SECTION -->
+    <div id="more-page" style="display: none; background-color: #000; min-height: 100vh;">
+        <div class="search-top-bar" style="padding: 20px 5%;">
+            <img src="img/logo.png" alt="Logo" class="search-logo" onclick="showPage('interface-page')">
+        </div>
+
+        <div class="more-container">
+            <div class="movie-section">
+                <h3 class="section-title">Suggestions</h3>
+                <div class="movie-row">
+                    <img src="img/1.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/2.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/3.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/4.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/5.jpg" alt="Movie" onclick="openVideo('dQw4w9XcQ')">
+                </div>
+            </div>
+
+            <div class="movie-section">
+                <h3 class="section-title">Recently Watched</h3>
+                <div class="movie-row">
+                    <img src="img/6.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/7.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/8.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/9.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/10.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                </div>
+            </div>
+
+            <div class="movie-section">
+                <h3 class="section-title">Web Series</h3>
+                <div class="movie-row">
+                    <img src="img/11.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/12.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/13.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/14.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/15.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                </div>
+            </div>
+
+            <div class="movie-section">
+                <h3 class="section-title">Anime</h3>
+                <div class="movie-row">
+                    <img src="img/16.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/17.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/18.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/19.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/20.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                </div>
+            </div>
+
+            <div class="movie-section">
+                <h3 class="section-title">Popular Series</h3>
+                <div class="movie-row">
+                    <img src="img/21.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/22.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/23.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/24.jpeg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                    <img src="img/25.jpg" alt="Movie" onclick="openVideo('dQw4w9WgXcQ')">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-title">Questions? Contact us.</p>
+                <div class="footer-row">
+                    <div class="footer-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Speed Test</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Cookie Preferences</a>
+                        <a href="#">Legal Notices</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Account</a>
+                        <a href="#">Ways to Watch</a>
+                        <a href="#">Corporate Information</a>
+                        <a href="#">Only on Movieflix</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Media Center</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+                <p class="footer-country">Movieflix Pakistan</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div id="faq-page" style="display: none;">
+        <div class="auth-header">
+            <img src="img/logo.png" alt="Logo" class="logo" onclick="showPage('interface-page')"
+                style="cursor: pointer;">
+        </div>
+
+        <div class="faq-content">
+            <h1 class="faq-main-title">Frequently Asked Questions</h1>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        What is Movieflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Movieflix is a streaming service that offers a wide variety of award-winning TV shows,
+                            movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                        <p>You can watch as much as you want, whenever you want without a single commercial – all for
+                            one low monthly price. There's always something new to discover and new TV shows and movies
+                            are added every week!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        How much does Movieflix cost?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Watch Movieflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for
+                            one fixed monthly fee. Plans range from Rs 250 to Rs 1,100 a month. No extra costs, no
+                            contracts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        Where can I watch?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Watch anywhere, anytime. Sign in with your Movieflix account to watch instantly on the web at
+                            movieflix.com from your personal computer or on any internet-connected device that offers
+                            the Movieflix app, including smart TVs, smartphones, tablets, streaming media players and
+                            game consoles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        How do I cancel?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Movieflix is flexible. There are no pesky contracts and no commitments. You can easily cancel
+                            your account online in two clicks. There are no cancellation fees – start or stop your
+                            account anytime.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        What can I watch on Movieflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Movieflix has an extensive library of feature films, documentaries, TV shows, anime,
+                            award-winning Movieflix originals, and more. Watch as much as you want, anytime you want.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleAccordion(this)">
+                        Is Movieflix good for kids?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Movieflix Kids experience is included in your membership to give parents control while
+                            kids enjoy family-friendly TV shows and movies in their own space.</p>
+                        <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                            rating of content kids can watch and block specific titles you don't want kids to see.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer secondary-footer">
+            <div class="footer-container">
+                <p class="footer-title">Questions? Contact us.</p>
+                <div class="footer-row">
+                    <div class="footer-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Terms of Use</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
