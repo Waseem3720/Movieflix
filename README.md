@@ -44,17 +44,23 @@ Movieflix is a modern, responsive web application inspired by popular streaming 
 git clone https://github.com/Waseem3720/Movieflix.git
 
 ## ⚡ Usage
-Sign Up: Create a new account with name, email, and password.
-Login: Use your email and password to log in.
-Browse Movies: Click on categories or scroll through movie sections.
-Search: Type in the search bar to filter movies globally.
-Watch Video: Click on a movie card to open the video modal.
-FAQ: Click on questions to expand answers.
+
+- **Sign Up:** Create a new account with name, email, and password.  
+- **Login:** Use your email and password to log in.  
+- **Browse Movies:** Click on categories or scroll through movie sections.  
+- **Search:** Type in the search bar to filter movies globally.  
+- **Watch Video:** Click on a movie card to open the video modal.  
+- **FAQ:** Click on questions to expand answers.  
+
+---
 
 ## 🛠️ Technologies Used
 
-HTML5 & CSS3 – For structure and styling
-JavaScript (ES6) – For dynamic content and interactivity
-LocalStorage – For user authentication persistence
-Responsive Design – Optimized for mobile, tablet, and desktop
-Grid & Flexbox – For movie layouts and alignment
+- **HTML5 & CSS3** – For structure and styling  
+- **JavaScript (ES6)** – For dynamic content and interactivity  
+- **LocalStorage** – For user authentication persistence  
+- **Responsive Design** – Optimized for mobile, tablet, and desktop  
+- **Grid & Flexbox** – For movie layouts and alignment  
+
+
+
